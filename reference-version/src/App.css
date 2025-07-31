@@ -1,0 +1,190 @@
+/*
+ * Styles pour la version de référence accessible.
+ * Les styles mettent en évidence le focus et rendent le lien d'évitement visible au focus.
+ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Lien d'évitement caché hors focus */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+header, footer {
+  background: #f7f7f7;
+  padding: 1rem;
+}
+
+nav .nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+nav a,
+nav button {
+  background: none;
+  border: none;
+  color: #0066cc;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1rem;
+}
+nav button:focus,
+nav a:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+.submenu {
+  position: absolute;
+  margin-top: 0.25rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  list-style: none;
+}
+.submenu li {
+  margin-bottom: 0.5rem;
+}
+.submenu li:last-child {
+  margin-bottom: 0;
+}
+
+.images-section img {
+  margin-right: 0.5rem;
+}
+
+.data-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.data-table caption {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.data-table th,
+.data-table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+}
+.data-table th {
+  background: #f0f0f0;
+}
+
+.links-section a {
+  margin-right: 1rem;
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+.form-field {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.form-field label {
+  margin-bottom: 0.25rem;
+}
+.form-field input[type="text"],
+.form-field input[type="email"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.form-field input:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+.required-indicator {
+  color: #d40000;
+}
+fieldset {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+legend {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.submit-btn {
+  padding: 0.5rem 1rem;
+  background: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.submit-btn:focus {
+  outline: 2px solid #003366;
+  outline-offset: 2px;
+}
+
+.open-modal-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.open-modal-btn:focus {
+  outline: 2px solid #003366;
+  outline-offset: 2px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal {
+  background: #fff;
+  max-width: 400px;
+  width: 90%;
+  padding: 1rem;
+  border-radius: 4px;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.modal-close:focus {
+  outline: 2px solid #003366;
+  outline-offset: 2px;
+}
