@@ -34,12 +34,34 @@ function App() {
       {/* Images */}
       <section className="images-section">
         {/* Image informative sans alt */}
-        <img src="https://via.placeholder.com/300x150" />
+        {/*
+          Remplace le placeholder par une illustration réelle. Le texte alternatif
+          est volontairement omis pour rester en phase avec l'énoncé des
+          exercices (le candidat doit ajouter un alt approprié pour rendre
+          l'image accessible).
+        */}
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/A+F-Sticker-16.png" />
+
         {/* Image décorative avec un alt inutile */}
-        <img src="https://via.placeholder.com/100x100" alt="Image décorative" />
+        {/*
+          Une image décorative n'a pas besoin de texte alternatif, mais on
+          conserve un alt non pertinent pour illustrer l'erreur à corriger.
+        */}
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/65/Abstract_Blue_Background.png"
+          alt="Image décorative"
+        />
+
         {/* Icône de réseau social sans alternative textuelle */}
+        {/*
+          L'icône Twitter réelle est intégrée, mais sans nom accessible. Le
+          candidat devra ajouter un libellé ou un aria-label.
+        */}
         <a href="https://www.twitter.com" className="social-link">
-          <img src="https://via.placeholder.com/24" alt="" />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Twitter_Logo_Blue.png"
+            alt=""
+          />
         </a>
       </section>
 
@@ -101,7 +123,7 @@ function App() {
           {/* Bouton d'envoi seulement icône */}
           <button type="submit" className="submit-btn">
             <img
-              src="https://via.placeholder.com/20"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Paper-plane_font_awesome_white.svg/512px-Paper-plane_font_awesome_white.svg.png"
               alt=""
               className="btn-icon"
             />
